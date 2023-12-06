@@ -1,6 +1,6 @@
 (ns clojurelab.lab2.lab2-1)
 
-(def step 0.1)
+(def step 0.2)
 (def start 0)
 
 (defn count_one_sum
@@ -46,12 +46,12 @@
 
 (println "without memoization")
 (let [fun (fn [x] (* x x))]
-  (println (time ((func_integrate_calc fun) 5.6)))
+  (println (time ((func_integrate_calc fun) 5.5)))
   (println (time ((func_integrate_calc fun) 5.6)))
   )
 
 (println "with memoization")
 (let [fun (fn [x] (* x x))]
   (println (time ((mem_func_integrate_calc fun) 5.5)))
-  (println (time ((mem_func_integrate_calc fun) 6)))
+  (println (time ((mem_func_integrate_calc fun) 5.6)))
   )
